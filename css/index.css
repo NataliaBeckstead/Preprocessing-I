@@ -129,8 +129,90 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
 }
 html,
 body {
   height: 100%;
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+header .headerLeft {
+  background-color: #48639C;
+  color: #E0EAFF;
+  width: 27%;
+}
+header .headerLeft img {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
+  border-radius: 100%;
+  margin: 5rem;
+  margin-left: 10rem;
+}
+header .headerRight {
+  background-color: #E0EAFF;
+  color: #1F2B44;
+  width: 73%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 5rem;
+}
+header .headerRight h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 7rem;
+  padding: 4rem 0;
+}
+header .headerRight nav {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .headerRight nav a {
+  text-decoration: none;
+  color: #1F2B44;
+}
+.mainContent {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.mainContent .sectionLeft {
+  background-color: #48639C;
+  color: #E0EAFF;
+  width: 27%;
+}
+.mainContent .sectionRight {
+  background-color: #E0EAFF;
+  color: #1F2B44;
+  width: 73%;
+}
+footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+footer div {
+  background-color: #48639C;
+  color: #E0EAFF;
+  width: 27%;
+}
+footer nav {
+  background-color: #E0EAFF;
+  color: #1F2B44;
+  width: 73%;
 }

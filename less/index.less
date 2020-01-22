@@ -50,10 +50,99 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	margin:0;
+  	padding:0;
+	max-width: 100%;  //added
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size: 62.5%; //added
 }
 
+// my code:
+
+@backgroundcolorleft: #48639C;
+@backgroundcolorright: #E0EAFF;
+@textcolorleft: #E0EAFF;
+@textcolorright: #1F2B44;
+
+@headerfont: 'Ubuntu', sans-serif;
+@mainfont: 'ZCOOL QingKe HuangYou', cursive;
+
+.leftside() {
+	background-color: @backgroundcolorleft;
+	color: @textcolorleft;
+	width: 27%;
+}
+.rightside() {
+	background-color: @backgroundcolorright;
+	color: @textcolorright;
+	width: 73%;
+}
+.custom-layout(@justify, @align) {
+	display: flex;
+	justify-content: @justify;
+	align-items: @align;
+}
+body {
+	font-size: 1.6rem;
+	font-family: @mainfont;
+}
+
+header {
+	.custom-layout(flex-start, stretch);
+	.headerLeft {
+		.leftside();
+		img {
+			.custom-layout(space-around, center);
+			width: 200px;
+			border-radius: 100%;
+			margin: 5rem;
+			margin-left: 10rem;
+		}
+	}
+	.headerRight {
+		.rightside();
+		.custom-layout(center, flex-start);
+		flex-direction: column;
+		padding-left: 5rem;
+		h1 {
+			font-family: @headerfont;
+			font-size: 7rem;
+			padding: 4rem 0;
+		}
+		nav {
+			width: 60%;
+			.custom-layout(space-between, center);
+			a {
+				text-decoration: none;
+				color: @textcolorright;
+			}
+		}
+	}
+	
+}
+
+.mainContent {
+	.custom-layout(flex-start, stretch);
+	.sectionLeft {
+		.leftside();
+	}
+
+	.sectionRight {
+		.rightside();
+	}
+}
+
+footer {
+	.custom-layout(flex-start, stretch);
+	div {
+		.leftside();
+	}
+
+	nav {
+		.rightside();
+	}
+}
