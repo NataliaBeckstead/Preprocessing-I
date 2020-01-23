@@ -50,10 +50,243 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	margin:0;
+  	padding:0;
+	max-width: 100%;  //added
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size: 62.5%; //added
 }
 
+// my code:
+
+@backgroundcolorleft: #48639C;
+@backgroundcolorright: #E0EAFF;
+@textcolorleft: #E0EAFF;
+@textcolorright: #1F2B44;
+
+@headerfont: 'ZCOOL QingKe HuangYou', cursive;
+@mainfont: 'Ubuntu', sans-serif;
+
+.leftside() {
+	background-color: @backgroundcolorleft;
+	color: @textcolorleft;
+	width: 27%;
+}
+.rightside() {
+	background-color: @backgroundcolorright;
+	color: @textcolorright;
+	width: 73%;
+}
+.custom-layout(@justify, @align) {
+	display: flex;
+	justify-content: @justify;
+	align-items: @align;
+}
+body {
+	font-size: 1.6rem;
+	font-family: @mainfont;
+}
+
+header {
+	.custom-layout(flex-start, stretch);
+	.headerLeft {
+		.leftside();
+		img {
+			.custom-layout(flex-start, center);
+			width: 50%;
+			border-radius: 100%;
+			margin: 5rem;
+			margin-left: 20%;
+		}
+	}
+	.headerRight {
+		.rightside();
+		.custom-layout(center, flex-start);
+		flex-direction: column;
+		padding-left: 5rem;
+		h1 {
+			font-family: @headerfont;
+			font-size: 9rem;
+			padding: 3rem 0;
+		}
+		nav {
+			width: 60%;
+			.custom-layout(space-between, center);
+			a {
+				text-decoration: none;
+				color: @textcolorright;
+				&:hover {
+					color: lighten(@textcolorright, 20%);
+				}
+			}
+		}
+		h2 {
+			font-family: @headerfont;
+			font-size: 4rem;
+		}
+	}
+	@media(max-width: 500px) {
+		.headerLeft {
+			display: none;
+		}
+		.headerRight {
+			h2{
+				padding-bottom: 2rem;
+			}
+			.leftside();
+			width: 100%;
+			nav {
+				padding-top: 2rem;
+				width: 90%;
+			}
+		}
+	}
+	
+}
+
+.mainContent {
+	.custom-layout(flex-start, stretch);
+	h3 {
+		font-size: 2.5rem;
+		border-bottom: 0.3rem @textcolorright solid;
+		padding: 1rem;
+		
+	}
+	.sectionLeft {
+		.leftside();
+		padding-left: 4%;
+		h3 {
+			border-bottom: 0.3rem @textcolorleft solid;
+		}
+		p {
+			padding-top: 3rem;
+		}
+		address{
+			#phone, #email {
+				text-decoration: none;
+				color: @textcolorleft;
+				&:hover {
+					color: lighten(@textcolorleft, 20%);
+				}
+			}
+		}
+		@media(max-width: 500px) {
+			padding-left: 5rem;
+			.rightside();
+			width: 100%;
+			h3 {
+				border-bottom: 0.3rem @textcolorright solid;
+			}
+			address{
+				#phone, #email {
+					text-decoration: none;
+					color: @textcolorright;
+					&:hover {
+						color: lighten(@textcolorright, 20%);
+					}
+				}
+			}
+		}
+		
+	}
+
+	.sectionRight {
+		.rightside();
+		padding-left: 5rem;
+		table {
+			width: 70%;
+			margin-bottom: 3rem;;
+			td {
+				padding-top: 3rem;
+			}
+			.year{
+				width: 15%;
+			}
+		}
+		.skills {
+			.custom-layout(flex-start, flex-start);
+			div{
+				width: 7rem;
+			}
+			ul {
+				padding-top: 3rem;
+				li {
+					margin-bottom: 0.7rem;
+				}
+			}
+			.ulp {
+				padding-left: 3rem;
+			}
+			@media(max-width: 500px) {
+				div {
+					display: none;
+				}
+				flex-wrap: wrap;
+				ul {
+					width: 40%;
+					margin: 0%;
+					padding: 0;
+				}
+				.ulp {
+					padding-left: 0;
+				}
+			}
+
+		}
+		@media(max-width: 500px) {
+			width: 100%;
+		}
+	}
+	@media(max-width: 500px) {
+		flex-direction: column;
+		h3 {
+			font-family: @headerfont;
+			padding-top: 3rem;
+			font-weight: bold;
+		}
+	}
+}
+
+footer {
+	.custom-layout(flex-start, stretch);
+	
+	div {
+		.leftside();
+	}
+	.navContainer {
+		
+		.rightside();
+		padding: 7rem 0 4rem 5rem;
+		nav {
+			width: 60%;
+			.custom-layout(space-between, stretch);
+			a {
+				text-decoration: none;
+				color: @textcolorright;
+				&:hover {
+					color: lighten(@textcolorright, 20%);
+				}
+			}
+		}
+	}
+	@media(max-width: 500px) {
+		.footerright{
+			display: none;
+		}
+		.navContainer {
+			width: 100%;
+			padding: 2rem;
+			background-color: @backgroundcolorleft;
+			nav{
+				width: 90%;
+				padding-left: 3rem;
+				.custom-layout(space-between, center);
+			}
+		}
+	}
+	
+}

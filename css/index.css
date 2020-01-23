@@ -1,1 +1,375 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+header .headerLeft {
+  background-color: #48639C;
+  color: #E0EAFF;
+  width: 27%;
+}
+header .headerLeft img {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  border-radius: 100%;
+  margin: 5rem;
+  margin-left: 20%;
+}
+header .headerRight {
+  background-color: #E0EAFF;
+  color: #1F2B44;
+  width: 73%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 5rem;
+}
+header .headerRight h1 {
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-size: 9rem;
+  padding: 3rem 0;
+}
+header .headerRight nav {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .headerRight nav a {
+  text-decoration: none;
+  color: #1F2B44;
+}
+header .headerRight nav a:hover {
+  color: #3f578a;
+}
+header .headerRight h2 {
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-size: 4rem;
+}
+@media (max-width: 500px) {
+  header .headerLeft {
+    display: none;
+  }
+  header .headerRight {
+    background-color: #48639C;
+    color: #E0EAFF;
+    width: 27%;
+    width: 100%;
+  }
+  header .headerRight h2 {
+    padding-bottom: 2rem;
+  }
+  header .headerRight nav {
+    padding-top: 2rem;
+    width: 90%;
+  }
+}
+.mainContent {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.mainContent h3 {
+  font-size: 2.5rem;
+  border-bottom: 0.3rem #1F2B44 solid;
+  padding: 1rem;
+}
+.mainContent .sectionLeft {
+  background-color: #48639C;
+  color: #E0EAFF;
+  width: 27%;
+  padding-left: 4%;
+}
+.mainContent .sectionLeft h3 {
+  border-bottom: 0.3rem #E0EAFF solid;
+}
+.mainContent .sectionLeft p {
+  padding-top: 3rem;
+}
+.mainContent .sectionLeft address #phone,
+.mainContent .sectionLeft address #email {
+  text-decoration: none;
+  color: #E0EAFF;
+}
+.mainContent .sectionLeft address #phone:hover,
+.mainContent .sectionLeft address #email:hover {
+  color: #ffffff;
+}
+@media (max-width: 500px) {
+  .mainContent .sectionLeft {
+    padding-left: 5rem;
+    background-color: #E0EAFF;
+    color: #1F2B44;
+    width: 73%;
+    width: 100%;
+  }
+  .mainContent .sectionLeft h3 {
+    border-bottom: 0.3rem #1F2B44 solid;
+  }
+  .mainContent .sectionLeft address #phone,
+  .mainContent .sectionLeft address #email {
+    text-decoration: none;
+    color: #1F2B44;
+  }
+  .mainContent .sectionLeft address #phone:hover,
+  .mainContent .sectionLeft address #email:hover {
+    color: #3f578a;
+  }
+}
+.mainContent .sectionRight {
+  background-color: #E0EAFF;
+  color: #1F2B44;
+  width: 73%;
+  padding-left: 5rem;
+}
+.mainContent .sectionRight table {
+  width: 70%;
+  margin-bottom: 3rem;
+}
+.mainContent .sectionRight table td {
+  padding-top: 3rem;
+}
+.mainContent .sectionRight table .year {
+  width: 15%;
+}
+.mainContent .sectionRight .skills {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.mainContent .sectionRight .skills div {
+  width: 7rem;
+}
+.mainContent .sectionRight .skills ul {
+  padding-top: 3rem;
+}
+.mainContent .sectionRight .skills ul li {
+  margin-bottom: 0.7rem;
+}
+.mainContent .sectionRight .skills .ulp {
+  padding-left: 3rem;
+}
+@media (max-width: 500px) {
+  .mainContent .sectionRight .skills {
+    flex-wrap: wrap;
+  }
+  .mainContent .sectionRight .skills div {
+    display: none;
+  }
+  .mainContent .sectionRight .skills ul {
+    width: 40%;
+    margin: 0%;
+    padding: 0;
+  }
+  .mainContent .sectionRight .skills .ulp {
+    padding-left: 0;
+  }
+}
+@media (max-width: 500px) {
+  .mainContent .sectionRight {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .mainContent {
+    flex-direction: column;
+  }
+  .mainContent h3 {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    padding-top: 3rem;
+    font-weight: bold;
+  }
+}
+footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+footer div {
+  background-color: #48639C;
+  color: #E0EAFF;
+  width: 27%;
+}
+footer .navContainer {
+  background-color: #E0EAFF;
+  color: #1F2B44;
+  width: 73%;
+  padding: 7rem 0 4rem 5rem;
+}
+footer .navContainer nav {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+footer .navContainer nav a {
+  text-decoration: none;
+  color: #1F2B44;
+}
+footer .navContainer nav a:hover {
+  color: #3f578a;
+}
+@media (max-width: 500px) {
+  footer .footerright {
+    display: none;
+  }
+  footer .navContainer {
+    width: 100%;
+    padding: 2rem;
+    background-color: #48639C;
+  }
+  footer .navContainer nav {
+    width: 90%;
+    padding-left: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
