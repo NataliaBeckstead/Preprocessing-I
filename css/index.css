@@ -140,7 +140,7 @@ body {
 }
 body {
   font-size: 1.6rem;
-  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-family: 'Ubuntu', sans-serif;
 }
 header {
   display: flex;
@@ -172,9 +172,9 @@ header .headerRight {
   padding-left: 5rem;
 }
 header .headerRight h1 {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 7rem;
-  padding: 4rem 0;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-size: 9rem;
+  padding: 3rem 0;
 }
 header .headerRight nav {
   width: 60%;
@@ -186,20 +186,76 @@ header .headerRight nav a {
   text-decoration: none;
   color: #1F2B44;
 }
+header .headerRight nav a:hover {
+  color: #3f578a;
+}
+header .headerRight h2 {
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-size: 4rem;
+}
 .mainContent {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
 }
+.mainContent h3 {
+  font-size: 2.5rem;
+  border-bottom: 0.3rem #1F2B44 solid;
+  padding: 1rem;
+}
 .mainContent .sectionLeft {
   background-color: #48639C;
   color: #E0EAFF;
   width: 27%;
+  padding-left: 9rem;
+}
+.mainContent .sectionLeft h3 {
+  border-bottom: 0.3rem #E0EAFF solid;
+}
+.mainContent .sectionLeft p {
+  padding-top: 3rem;
+}
+.mainContent .sectionLeft address #phone,
+.mainContent .sectionLeft address #email {
+  text-decoration: none;
+  color: #E0EAFF;
+}
+.mainContent .sectionLeft address #phone:hover,
+.mainContent .sectionLeft address #email:hover {
+  color: #ffffff;
 }
 .mainContent .sectionRight {
   background-color: #E0EAFF;
   color: #1F2B44;
   width: 73%;
+  padding-left: 5rem;
+}
+.mainContent .sectionRight table {
+  width: 70%;
+  margin-bottom: 3rem;
+}
+.mainContent .sectionRight table td {
+  padding-top: 3rem;
+}
+.mainContent .sectionRight table .year {
+  width: 15%;
+}
+.mainContent .sectionRight .skills {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.mainContent .sectionRight .skills div {
+  width: 7rem;
+}
+.mainContent .sectionRight .skills ul {
+  padding-top: 3rem;
+}
+.mainContent .sectionRight .skills ul li {
+  margin-bottom: 0.7rem;
+}
+.mainContent .sectionRight .skills .ulp {
+  padding-left: 3rem;
 }
 footer {
   display: flex;
@@ -211,8 +267,22 @@ footer div {
   color: #E0EAFF;
   width: 27%;
 }
-footer nav {
+footer .navContainer {
   background-color: #E0EAFF;
   color: #1F2B44;
   width: 73%;
+  padding: 7rem 0 4rem 5rem;
+}
+footer .navContainer nav {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+footer .navContainer nav a {
+  text-decoration: none;
+  color: #1F2B44;
+}
+footer .navContainer nav a:hover {
+  color: #3f578a;
 }

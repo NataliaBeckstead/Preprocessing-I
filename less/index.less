@@ -68,8 +68,8 @@ html, body {
 @textcolorleft: #E0EAFF;
 @textcolorright: #1F2B44;
 
-@headerfont: 'Ubuntu', sans-serif;
-@mainfont: 'ZCOOL QingKe HuangYou', cursive;
+@headerfont: 'ZCOOL QingKe HuangYou', cursive;
+@mainfont: 'Ubuntu', sans-serif;
 
 .leftside() {
 	background-color: @backgroundcolorleft;
@@ -110,8 +110,8 @@ header {
 		padding-left: 5rem;
 		h1 {
 			font-family: @headerfont;
-			font-size: 7rem;
-			padding: 4rem 0;
+			font-size: 9rem;
+			padding: 3rem 0;
 		}
 		nav {
 			width: 60%;
@@ -119,7 +119,14 @@ header {
 			a {
 				text-decoration: none;
 				color: @textcolorright;
+				&:hover {
+					color: lighten(@textcolorright, 20%);
+				}
 			}
+		}
+		h2 {
+			font-family: @headerfont;
+			font-size: 4rem;
 		}
 	}
 	
@@ -127,22 +134,84 @@ header {
 
 .mainContent {
 	.custom-layout(flex-start, stretch);
+	h3 {
+		font-size: 2.5rem;
+		border-bottom: 0.3rem @textcolorright solid;
+		padding: 1rem;
+		
+	}
 	.sectionLeft {
 		.leftside();
+		padding-left: 9rem;
+		h3 {
+			border-bottom: 0.3rem @textcolorleft solid;
+		}
+		p {
+			padding-top: 3rem;
+		}
+		address{
+			#phone, #email {
+				text-decoration: none;
+				color: @textcolorleft;
+				&:hover {
+					color: lighten(@textcolorleft, 20%);
+				}
+			}
+		}
 	}
 
 	.sectionRight {
 		.rightside();
+		padding-left: 5rem;
+		table {
+			width: 70%;
+			margin-bottom: 3rem;;
+			td {
+				padding-top: 3rem;
+			}
+			.year{
+				width: 15%;
+			}
+		}
+		.skills {
+			.custom-layout(flex-start, flex-start);
+			div{
+				width: 7rem;
+			}
+			ul {
+				padding-top: 3rem;
+				li {
+					margin-bottom: 0.7rem;
+				}
+			}
+			.ulp {
+				padding-left: 3rem;
+			}
+		}
 	}
 }
 
 footer {
 	.custom-layout(flex-start, stretch);
+	
 	div {
 		.leftside();
 	}
-
-	nav {
+	.navContainer {
+		
 		.rightside();
+		padding: 7rem 0 4rem 5rem;
+		nav {
+			width: 60%;
+			.custom-layout(space-between, stretch);
+			a {
+				text-decoration: none;
+				color: @textcolorright;
+				&:hover {
+					color: lighten(@textcolorright, 20%);
+				}
+			}
+		}
 	}
+	
 }
