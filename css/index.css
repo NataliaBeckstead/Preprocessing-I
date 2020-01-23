@@ -154,12 +154,12 @@ header .headerLeft {
 }
 header .headerLeft img {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
-  width: 200px;
+  width: 50%;
   border-radius: 100%;
   margin: 5rem;
-  margin-left: 10rem;
+  margin-left: 20%;
 }
 header .headerRight {
   background-color: #E0EAFF;
@@ -193,6 +193,24 @@ header .headerRight h2 {
   font-family: 'ZCOOL QingKe HuangYou', cursive;
   font-size: 4rem;
 }
+@media (max-width: 500px) {
+  header .headerLeft {
+    display: none;
+  }
+  header .headerRight {
+    background-color: #48639C;
+    color: #E0EAFF;
+    width: 27%;
+    width: 100%;
+  }
+  header .headerRight h2 {
+    padding-bottom: 2rem;
+  }
+  header .headerRight nav {
+    padding-top: 2rem;
+    width: 90%;
+  }
+}
 .mainContent {
   display: flex;
   justify-content: flex-start;
@@ -207,7 +225,7 @@ header .headerRight h2 {
   background-color: #48639C;
   color: #E0EAFF;
   width: 27%;
-  padding-left: 9rem;
+  padding-left: 4%;
 }
 .mainContent .sectionLeft h3 {
   border-bottom: 0.3rem #E0EAFF solid;
@@ -223,6 +241,27 @@ header .headerRight h2 {
 .mainContent .sectionLeft address #phone:hover,
 .mainContent .sectionLeft address #email:hover {
   color: #ffffff;
+}
+@media (max-width: 500px) {
+  .mainContent .sectionLeft {
+    padding-left: 5rem;
+    background-color: #E0EAFF;
+    color: #1F2B44;
+    width: 73%;
+    width: 100%;
+  }
+  .mainContent .sectionLeft h3 {
+    border-bottom: 0.3rem #1F2B44 solid;
+  }
+  .mainContent .sectionLeft address #phone,
+  .mainContent .sectionLeft address #email {
+    text-decoration: none;
+    color: #1F2B44;
+  }
+  .mainContent .sectionLeft address #phone:hover,
+  .mainContent .sectionLeft address #email:hover {
+    color: #3f578a;
+  }
 }
 .mainContent .sectionRight {
   background-color: #E0EAFF;
@@ -257,6 +296,37 @@ header .headerRight h2 {
 .mainContent .sectionRight .skills .ulp {
   padding-left: 3rem;
 }
+@media (max-width: 500px) {
+  .mainContent .sectionRight .skills {
+    flex-wrap: wrap;
+  }
+  .mainContent .sectionRight .skills div {
+    display: none;
+  }
+  .mainContent .sectionRight .skills ul {
+    width: 40%;
+    margin: 0%;
+    padding: 0;
+  }
+  .mainContent .sectionRight .skills .ulp {
+    padding-left: 0;
+  }
+}
+@media (max-width: 500px) {
+  .mainContent .sectionRight {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .mainContent {
+    flex-direction: column;
+  }
+  .mainContent h3 {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    padding-top: 3rem;
+    font-weight: bold;
+  }
+}
 footer {
   display: flex;
   justify-content: flex-start;
@@ -285,4 +355,21 @@ footer .navContainer nav a {
 }
 footer .navContainer nav a:hover {
   color: #3f578a;
+}
+@media (max-width: 500px) {
+  footer .footerright {
+    display: none;
+  }
+  footer .navContainer {
+    width: 100%;
+    padding: 2rem;
+    background-color: #48639C;
+  }
+  footer .navContainer nav {
+    width: 90%;
+    padding-left: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
